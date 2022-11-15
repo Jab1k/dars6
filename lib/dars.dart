@@ -11,48 +11,58 @@ class Dars extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          leading: Icon(Icons.menu),
+          leading: const Icon(Icons.menu),
           backgroundColor: Colors.greenAccent,
-          title: Text('Geeksforgeeks'),
+          title: const Text('Geeksforgeeks'),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              Expanded(
-                flex: 1,
-                child: Container(
-                  width: 250,
-                  height: 250,
-                  color: Colors.red,
-                  child: Center(
-                    child: Text('First Widget'),
+        body: Row(
+          children: [
+            Expanded(
+              flex: 1,
+              child: Container(
+                width: 250,
+                height: 100,
+                color: Colors.black12,
+                child: const Padding(
+                  padding: EdgeInsets.only(top: 30, left: 10),
+                  child: Text(
+                    'A',
+                    style: TextStyle(fontSize: 30),
                   ),
                 ),
               ),
-              Expanded(
-                flex: 6,
-                child: Container(
-                  width: 250,
-                  height: 250,
-                  color: Colors.yellow,
-                  child: Center(
-                    child: Text('Second Widget'),
+            ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                width: 250,
+                height: 100,
+                color: Colors.yellow,
+                child: const Padding(
+                  padding: EdgeInsets.only(top: 30, left: 10),
+                  child: Text(
+                    'B',
+                    style: TextStyle(fontSize: 30),
                   ),
                 ),
               ),
-              Expanded(
-                flex: 1,
-                child: Container(
-                  width: 250,
-                  height: 250,
-                  color: Colors.brown,
-                  child: Center(
-                    child: Text('third Widget'),
+            ),
+            Expanded(
+              flex: 6,
+              child: Container(
+                width: 250,
+                height: 100,
+                color: Colors.red,
+                child: const Padding(
+                  padding: EdgeInsets.only(top: 30, left: 10),
+                  child: Text(
+                    'C',
+                    style: TextStyle(fontSize: 30),
                   ),
                 ),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
       ),
     );
